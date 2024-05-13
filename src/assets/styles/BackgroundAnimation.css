@@ -1,0 +1,44 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+  margin: auto;
+}
+.grid-container img {
+  width: 400px;
+  height: 600px;
+  border-radius: 20px;
+}
+
+.card1,
+.card2,
+.card3,
+.card4 {
+  align-items: center;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+}
+
+:is(.card1, .card2, .card3, .card4) .card-body {
+  position: absolute;
+  background-color: transparent;
+  color: #fff;
+  font-size: 50px;
+  width: 400px;
+  height: 600px;
+  background-color: rgba(2, 0, 36, 0.3);
+  right: -100%;
+  transition: 1s ease-in;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:is(.card1, .card2, .card3, .card4):hover .card-body {
+  right: 0;
+  border-radius: 20px;
+}
